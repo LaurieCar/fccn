@@ -1,0 +1,111 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    text-align: center;
+    margin-top: 40px;
+}
+p{
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.lien{
+    text-decoration: underline;
+}
+
+form{
+    max-width: 800px;
+    background-color: #13336e; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border: solid 1px white;
+}
+h3{
+    color: white;
+    margin-top: 60px;
+}
+input{
+    width: calc(27% - 5px);
+    margin: 8px;
+    margin-top: 40px;
+    height: 4vh;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+textarea{
+    width: calc(100% - 40px);
+    margin-top: 40px;
+    height: 20vh;
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+}
+button{
+    font-family: Quicksand;
+    margin: 8px;
+    border-radius: 10px;
+    background-color: #C30404;
+    color: white;
+    height: 4vh;
+    width: 5vw;
+    border: solid 1px white;
+    cursor: pointer;
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+label{
+    margin-left: 10px;
+}
+iframe{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.photogroupe{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.page h1{
+    color: white;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width : 480px){
+    iframe{
+        width: 100vw;
+    }
+    form{
+        background-color: #1a2434;
+    }
+    label{
+        color: white;
+    }
+    input{
+        width: 90%;
+        height: 5vh;
+        margin-bottom: 40px;
+    }
+    .lien{
+        color: #1a2434;
+    }
+    button{
+        width: 20vw;
+    }
+    .page h1{
+        color: #C30404;
+    }
+    h3{
+        color: #C30404;
+    }
+    div .photogroupe{
+        width: 350px;
+    }
+}
