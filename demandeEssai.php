@@ -147,7 +147,7 @@
 
         <h3>Inscrivez-vous:</h3> 
 
-        <form method="post" action="./register.php">
+        <form method="post" action="./member.php">
             <label for="nom_membre">Saisir votre nom :</label>
             <input type="text" name="nom_membre" placeholder="Nom" required="required"/>
             <label for="prenom_membre">Saisir votre prénom :</label>
