@@ -5,6 +5,8 @@ body{
     font-family: Quicksand;
     color: white;
 }
+
+/* MENU */
 nav{
     width: 100%;
     margin: 0 auto;
@@ -49,7 +51,9 @@ nav > ul li:hover .sous-menu{
     width: 100%;
     text-align: left;
 }
-
+.toggle{
+    display: none;
+}
 /* Mise en page header*/
 header{
     display: grid;
@@ -89,7 +93,7 @@ h2{
     
 }
 
-.burger{
+/* .burger{
     grid-column: 1;
     grid-row: 1;
     justify-self: center;
@@ -125,7 +129,7 @@ svg:hover{
     margin-right: 7em;
     padding-top: 0.5em;
     margin-left: 2em;
-}
+} */
 
 a{
     font-size: 1em;
@@ -138,7 +142,7 @@ a:hover{
     /*transform: scale(1.2);*/
 }
 
-#actualites, #boutique{
+/* #actualites, #boutique{
     grid-column: 2;
     grid-row: 1;
 }
@@ -155,7 +159,7 @@ a:hover{
     align-self: center;
     padding-top: 0.5em;
     padding-left: 2.5em;
-}
+} */
 
 /*Mise en page menu-nav*/
 ul{
@@ -304,4 +308,75 @@ ul{
         z-index: 99;
     }*/
     
+}
+
+@media only screen and (max-width : 990px){
+    #header .socialMedia{
+        display: none;
+    }
+    #footer{
+        display: block;
+    }
+    #footer .socialMedia{
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .facebook, .instagram{
+        margin-right: 30px;
+    }
+    .footer{
+        display: none;
+    }
+    #sponsor{
+        display: none;
+    }
+    .banniere{
+        display: none;
+    }
+    main{
+        background-color: #D3DFF2;
+        color: #1a2434;
+    }
+    .toggle{
+        display: block;
+        font-size: 3rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+        left: 0;
+    }
+    /*.ouvrir{
+        display: block;
+    }
+    /*.fermer{
+        display: none;*/
+    .open .ouvrir{
+        display: none;
+    }
+    .open .fermer{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #1a2434;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+    .open .menu{
+        transform: translateX(0);
+    }
+    #logo{
+        margin-top: 4vh;
+        margin-left: 8vw;
+        position: relative;
+        z-index: 20;
+    }
 }

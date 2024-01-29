@@ -56,7 +56,7 @@ main{
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 25vw 50vw 25vw;
-    background: url(images/imageFond.png), lightgray 50% / cover no-repeat;
+    background: url(./imageFond.png), lightgray 50% / cover no-repeat;
     margin-top: 100px;
     
 }

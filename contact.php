@@ -10,6 +10,7 @@
     <script src="./script.js" async></script>
 
     <!--liens police d'écriture-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Quicksand:wght@700&display=swap" rel="stylesheet">
@@ -20,10 +21,10 @@
     <header id="header">
         
         <div id="logo">
-            <img src="images/logo.png" alt="logo" height="80vh" width="80vw">
+            <a href="./index.html"><img src="images/logo.png" alt="logo" height="80vh" width="80vw"></a>
         </div>
 
-        <div class="burger">          
+        <!-- <div class="burger">          
             <button id="btnopen" class="menu-label">
                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 59" fill="none">
                     <path d="M61 3.10204H3" stroke="#F5F5F5" stroke-width="5.9421" stroke-linecap="round"/>
@@ -68,16 +69,45 @@
         
             </nav>        
         </div>
-    
-
-        <a id="menu" href="./index.html">ACCUEIL</a>
-
-        <a id="actualites" href="./index.html">ACTUALITES</a>
-        <a id="boutique" href="https://app.grinta.eu/fc-canal-nord-1/products?collection=official">BOUTIQUE</a>
-       
-        <h2>Suivez-nous</h2>
-            
-            <div class="socialMedia">
+        -->
+        <nav>
+                <div class="toggle">
+                    <i class="fa-solid fa-bars ouvrir"></i>
+                    <i class="fa-solid fa-xmark fermer"></i>
+                </div>
+                <ul class="menu">
+                    <li class="menu-deroulant">LE CLUB &ensp;▼
+                        <ul class="sous-menu">
+                            <li><a href="#">A propos</a></li>
+                            <li><a href="#">Le comité directeur</a></li>
+                            <li><a href="#">Nos partenaires</a></li>
+                            <li><a href="#">Devenir partenaire</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-deroulant">LES EQUIPES &ensp;▼
+                        <ul class="sous-menu">
+                            <li><a href="#">Ecole de foot</a></li>
+                            <li><a href="#">Pré-formation</a></li>
+                            <li><a href="#">Séniors</a></li>
+                            <li><a href="#">Féminines</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-deroulant">INFOS PRATIQUES &ensp;▼
+                        <ul class="sous-menu">
+                            <li><a href="#">Tarifs des licences</a></li>
+                            <li><a href="#">Planning des entraînements</a></li>
+                            <li><a href="./contact.php">Contact</a></li>
+                            <li><a href="./demandeEssai.php">Demande d'essai</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-deroulant">LA BOUTIQUE &ensp;▼
+                        <ul class="sous-menu">
+                            <li><a href="https://app.grinta.eu/fc-canal-nord-1/products?collection=official">grinta.eu</a></li>
+                        </ul>    
+                    </li>
+                </ul>
+            </nav>              
+            <article class="socialMedia">
                 <!--icone facebook-->
                 <a href="https://www.facebook.com/people/Football-Club-Canal-Nord/100057223128364/"><img src="./images/fb.svg" alt="logofb" class="facebook">
                 </a>
@@ -88,7 +118,7 @@
                 <!--icone linkedin-->
                 <a href="https://www.linkedin.com/company/footballclubcanalnord/about/"><img src="./images/linkedin.svg" alt="logolinkedin" class="linkedin">
                 </a>
-            </div>              
+            </article>              
     </header>
     
     <section class="banniere">

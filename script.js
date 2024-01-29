@@ -1,6 +1,4 @@
-// SCRIPT MENU NAVIGATION
-
-// Récupération bouton menu
+/* // Récupération bouton menu
 const menuButton = document.getElementById("btnopen");
 
 // Ajouter événement sur l'icone burger
@@ -24,7 +22,7 @@ btnClose.addEventListener('click', ()=>{
     if(menuNav.style.display === "block"){
         menuNav.style.display = "none";
     }
-})
+}) */ 
 
 // SCRIPT CARROUSEL
 
@@ -79,3 +77,14 @@ function afficherMasquer(){
         droit.style.visibility="visible";
     }
 }
+/* // SCRIPT MENU NAVIGATION
+
+// Récupération des variables
+const toggle = document.querySelector('.toggle');
+const body = document.querySelector('body');
+
+// Ajouter un évènement sur le toggle
+toggle.addEventListener('click', ()=>{
+    // Création d'une classe lorque le menu est ouvert
+    body.classList.toggle('open');
+}) */
