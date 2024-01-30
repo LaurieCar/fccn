@@ -1,0 +1,382 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1a2434;
+    font-family: Quicksand;
+    color: white;
+}
+
+/* MENU */
+nav{
+    width: 100%;
+    margin: 0 auto;
+    position: sticky;
+    top: 0%;
+    margin-top: 4.5vh;
+}
+nav ul li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    position: relative;
+}
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+nav a{
+    display: block;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+nav a:hover{
+    background-color: #C30404;
+}
+.sous-menu{
+    display: none;
+    position: absolute;
+    background-color: #1a2434;
+    z-index: 1000;
+    width: 100%;
+}
+nav > ul li:hover .sous-menu{
+    display: block;
+}
+.menu-deroulant{
+    cursor: pointer;
+}
+.sous-menu li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+.toggle{
+    display: none;
+}
+/* Mise en page header*/
+header{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 20vw 60vw 20vw;
+    z-index: 4000; 
+}
+
+.socialMedia{
+    grid-column: 3;
+    grid-row :1;
+    justify-self: end;
+    margin-right: 5vw;
+    align-self: center;
+}
+
+.facebook, .instagram{
+    margin-right: 8px;
+}
+
+h2{
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    padding-left: 8em;
+    padding-top: 0.5em;
+    font-size: 1em;
+}
+
+#logo{
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 1em;
+    margin-left: 4em;
+    padding-bottom: 1em;
+    
+    
+}
+
+/* .burger{
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    margin-top: 20px;
+    z-index: 4;
+}
+
+svg{
+    transition: .1s;
+}
+svg:hover{
+    transform: scale(1.2);
+}
+
+.menu-cb{
+    appearance: none;
+}
+.menu-label{
+    cursor: pointer;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background-color: #1a2434;
+    border: none;
+}
+
+#menu{
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+    margin-right: 7em;
+    padding-top: 0.5em;
+    margin-left: 2em;
+} */
+
+a{
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    transition: .1s;
+}
+a:hover{
+    text-decoration: none;
+    /*transform: scale(1.2);*/
+}
+
+/* #actualites, #boutique{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#actualites{
+    justify-self: start;
+    align-self: center;
+    padding-top: 0.5em;
+    padding-left: 3em;
+}
+
+#boutique{
+    justify-self: center;
+    align-self: center;
+    padding-top: 0.5em;
+    padding-left: 2.5em;
+} */
+
+/*Mise en page menu-nav*/
+ul{
+    list-style-type: none;
+}
+#flex{
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+
+}
+#menu-nav{
+    position: absolute;
+    top: 7em;
+    justify-content: space-around;
+    background-color: #1a2434;
+    color: white;
+    display: none;
+    z-index: 99;
+    transition: all 1.5s ease-in-out;
+}
+.menu-item{
+    padding: 1em;
+    color: white;
+}
+.menu-link{
+    color: white;
+    text-decoration: none;
+}
+.menu-link:hover{
+    background-color: #C30404;
+    transform: scale(1.5);
+}
+#btnClose{
+    display: flex;
+    justify-content: center;
+    background-color: #1a2434;
+    color: white;
+    border-style: none;
+    transition: .1s;
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+#btnClose:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    color: #C30404;
+}
+
+
+/* Mise en page bannière*/
+.banniere{
+    display: flex;
+   background-color: #D3DFF2;
+   color: #1a2434;
+   justify-content: center;
+   padding: 1em;
+   align-items: center;
+   gap: 20px;
+   
+}
+
+/* Sponsor*/
+#sponsor{
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-template-rows: auto;
+    background-color: #13336E;
+    background-size: cover;
+    border: solid #D3DFF2 0.5px;
+    height: 300px;
+    width: auto;
+
+}
+.sponsor{
+    justify-self: center;
+    align-self: center;
+}
+
+/* Footer*/
+#footer{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;  
+    text-align: center;
+    
+}
+
+.footer li{
+    display: inline;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width : 480px){
+    #header .socialMedia{
+        display: none;
+    }
+    #footer{
+        display: block;
+    }
+    #footer .socialMedia{
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .facebook, .instagram{
+        margin-right: 30px;
+    }
+    .footer{
+        display: none;
+    }
+    #sponsor{
+        display: none;
+    }
+    .banniere{
+        display: none;
+    }
+    main{
+        background-color: #D3DFF2;
+        color: #1a2434;
+    }
+    #menu,#actualites,#boutique {
+        display: none;
+    }
+    #btnopen{
+        margin-left: 130vw;
+    }
+    h2{
+        display: none;
+    }
+    #logo{
+        margin-top: 4vh;
+        margin-left: 8vw;
+    }
+    /*#menu-nav{
+        display: none;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background-color: #1a2434;
+        color: white;
+        z-index: 99;
+    }*/
+    
+}
+
+@media only screen and (max-width : 990px){
+    #header .socialMedia{
+        display: none;
+    }
+    #footer{
+        display: block;
+    }
+    #footer .socialMedia{
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .facebook, .instagram{
+        margin-right: 30px;
+    }
+    .footer{
+        display: none;
+    }
+    #sponsor{
+        display: none;
+    }
+    .banniere{
+        display: none;
+    }
+    main{
+        background-color: #D3DFF2;
+        color: #1a2434;
+    }
+    .toggle{
+        display: block;
+        font-size: 3rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+        left: 0;
+    }
+    /*.ouvrir{
+        display: block;
+    }
+    /*.fermer{
+        display: none;*/
+    .open .ouvrir{
+        display: none;
+    }
+    .open .fermer{
+        display: block;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #1a2434;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+    .open .menu{
+        transform: translateX(0);
+    }
+    #logo{
+        margin-top: 4vh;
+        margin-left: 8vw;
+        position: relative;
+        z-index: 20;
+    }
+}
