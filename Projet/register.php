@@ -8,28 +8,41 @@
     // Test si le bouton est cliqué
     if(isset($_POST["submit"])){
         //Test si tous les champs sont remplis
-        if(!empty($_POST["nom_contact"]) AND !empty($_POST["prenom_contact"]) AND !empty($_POST["email_contact"]) AND !empty($_POST["telephone_contact"]) AND !empty($_POST["message_contact"])){
+        if(!empty($_POST["nom_contact"]) 
+            AND !empty($_POST["prenom_contact"]) 
+            AND !empty($_POST["email_contact"]) 
+            AND !empty($_POST["telephone_contact"]) 
+            AND !empty($_POST["message_contact"])){
             // nettoyer les entrées du formulaire
             $nom = cleanInput($_POST["nom_contact"]);
             $prenom = cleanInput($_POST["prenom_contact"]);
             $email = cleanInput($_POST["email_contact"]); 
             $telephone = cleanInput($_POST["telephone_contact"]);
             $message = cleanInput($_POST["message_contact"]);
-            // Ajouter le contact en BDD
-            ajouterContact($bdd,$nom,$prenom,$email,$telephone,$message);
-            // Afficher un message
-            header("Location:./remerciement.php");
+            //
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)){
+                // Ajouter le contact en BDD
+                addContact($bdd,$nom,$prenom,$email,$telephone,$message);
+                // Afficher un message
+                header("Location:./remerciement.php");
+            }
+            else{
+                header("Location:./contact.php?error=2");
+            }
+            
         }
         else{
-            echo "Veuillez remplir tous les champs du formulaire";
+            header("Location:./contact.php?error=1");
         }
     }
 
     // fonction pour ajouter un contact à la BDD
-    function ajouterContact($bdd,string $nom,string $prenom,string $email,string $telephone,string $message): void{
+    function addContact($bdd,string $nom,string $prenom,string $email,string $telephone,string $message): void{
         try {
             // requete SQL
-            $requete = $bdd->prepare('INSERT INTO contact(nom_contact,prenom_contact,email_contact,telephone_contact,message_contact) VALUE(?,?,?,?,?)');
+            $requete = $bdd->prepare('INSERT INTO contact(nom_contact,prenom_contact,
+                                    email_contact,telephone_contact,message_contact) 
+                                    VALUE(?,?,?,?,?)');
             $requete->bindParam(1,$nom,PDO::PARAM_STR);
             $requete->bindParam(2,$prenom,PDO::PARAM_STR);
             $requete->bindParam(3,$email,PDO::PARAM_STR);
@@ -48,4 +61,4 @@
     function cleanInput(?string $value):?string{
         return htmlspecialchars(strip_tags(trim($value)),ENT_NOQUOTES);
     }
-?>
+

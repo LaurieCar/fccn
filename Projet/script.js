@@ -1,38 +1,26 @@
-/* // Récupération bouton menu
-const menuButton = document.getElementById("btnopen");
+// SCRIPT MENU BURGER
+// Récupération des variables
+const toggle = document.querySelector('.toggle');
+const body = document.querySelector('body');
 
-// Ajouter événement sur l'icone burger
-menuButton.addEventListener('click', ()=>{
-    // Récupération id du menu de navigation
-    const menuNav = document.getElementById("menu-nav");
-    if(menuNav.style.display === "none"){
-        menuNav.style.display = "block";
-    }
-    else{
-        menuNav.style.display = "none";
-    }
-})
-
-// Récupération bouton close
-const btnClose = document.getElementById('btnClose');
-
-// Evènement sur le bouton close
-btnClose.addEventListener('click', ()=>{
-    const menuNav = document.getElementById("menu-nav");
-    if(menuNav.style.display === "block"){
-        menuNav.style.display = "none";
-    }
-}) */ 
+// Ajouter un évènement sur le toggle
+toggle.addEventListener('click', ()=>{
+    // Création d'une classe lorque le menu est ouvert
+    body.classList.toggle('open');
+}) 
 
 // SCRIPT CARROUSEL
+// Initialisation des variables et récupération des éléments HTML
+let nbr;
+let position;
+const container=document.getElementById("container");
+const gauche=document.getElementById("gauche");
+const droit=document.getElementById("droit");
 
 document.body.onload = function(){
-    nbr=3;
+    nbr=6;
     position=0;
-    // Récuperation des éléments HTML
-    container=document.getElementById("container");
-    gauche=document.getElementById("gauche");
-    droit=document.getElementById("droit");
+
     // Modification largeur container*nbr images carrousel
     container.style.width=(1000*nbr)+"px";
 
@@ -45,6 +33,7 @@ document.body.onload = function(){
         container.appendChild(div);
     }
 }
+
 // Programmation des boutons
 gauche.onclick=function(){
     if(position>-nbr+1){
@@ -70,21 +59,11 @@ function afficherMasquer(){
     else{
         gauche.style.visibility="visible";
     }
-    if(position==0){
+    if(position===0){
         droit.style.visibility="hidden";
     }
     else{
         droit.style.visibility="visible";
     }
 }
-/* // SCRIPT MENU NAVIGATION
 
-// Récupération des variables
-const toggle = document.querySelector('.toggle');
-const body = document.querySelector('body');
-
-// Ajouter un évènement sur le toggle
-toggle.addEventListener('click', ()=>{
-    // Création d'une classe lorque le menu est ouvert
-    body.classList.toggle('open');
-}) */

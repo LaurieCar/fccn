@@ -18,107 +18,48 @@
 </head>
 
 <body>
-    <header id="header">
-        
-        <div id="logo">
-            <a href="./index.html"><img src="images/logo.png" alt="logo" height="80vh" width="80vw"></a>
-        </div>
-
-        <!-- <div class="burger">          
-            <button id="btnopen" class="menu-label">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 59" fill="none">
-                    <path d="M61 3.10204H3" stroke="#F5F5F5" stroke-width="5.9421" stroke-linecap="round"/>
-                    <path d="M61 29.2917H3" stroke="#F5F5F5" stroke-width="5.9421" stroke-linecap="round"/>
-                    <path d="M61 55.4814H3" stroke="#F5F5F5" stroke-width="5.9421" stroke-linecap="round"/>
-                </svg>
-            </button>
-        
-            <nav id="menu-nav">
-                <button id="btnClose">
-                    <img src="./images/btnclose.svg" alt="fermer" width="20" height="20">
-                </button>
-                <div id="flex">
-                <div class="club">
-                    <ul>
-                        <li class="menu-item">LE CLUB</li>
-                        <li class="menu-item"><a class="menu-link" href="#">A propos</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#">Comité directeur</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#">Nos partenaires</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#">Devenir partenaire</a></li>
-                    </ul>
-                </div>
-                <div class="equipes">
-                    <ul>
-                        <li class="menu-item">LES EQUIPES</li>
-                        <li class="menu-item"><a class="menu-link" href="#">Ecole de Football</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#">Pré-Formation</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#">Séniors</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#">Féminines</a></li>
-                    </ul>
-                </div>
-                <div class="infos">
-                    <ul>
-                        <li class="menu-item">INFOS PRATIQUES</li>
-                        <li class="menu-item"><a class="menu-link" href="#">Tarifs des licences</a></li>
-                        <li class="menu-item"><a class="menu-link" href="#">Planning des entraînements</a></li>
-                        <li class="menu-item"><a class="menu-link" href="./contact.php">Contact</a></li>
-                        <li class="menu-item"><a class="menu-link" href="./demandeEssai.html">Demande d'essai</a></li>
-                    </ul>
-                </div>
-                </div>
-        
-            </nav>        
-        </div>
-        -->
+    <header>
+    <a href="./index.html"><img class="logo" src="images/dessinLogo.svg" alt="photo logo" height="100vh" width="100vw"></a>
         <nav>
-                <div class="toggle">
-                    <i class="fa-solid fa-bars ouvrir"></i>
-                    <i class="fa-solid fa-xmark fermer"></i>
-                </div>
-                <ul class="menu">
-                    <li class="menu-deroulant">LE CLUB &ensp;▼
-                        <ul class="sous-menu">
-                            <li><a href="#">A propos</a></li>
-                            <li><a href="#">Le comité directeur</a></li>
-                            <li><a href="#">Nos partenaires</a></li>
-                            <li><a href="#">Devenir partenaire</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-deroulant">LES EQUIPES &ensp;▼
-                        <ul class="sous-menu">
-                            <li><a href="#">Ecole de foot</a></li>
-                            <li><a href="#">Pré-formation</a></li>
-                            <li><a href="#">Séniors</a></li>
-                            <li><a href="#">Féminines</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-deroulant">INFOS PRATIQUES &ensp;▼
-                        <ul class="sous-menu">
-                            <li><a href="#">Tarifs des licences</a></li>
-                            <li><a href="#">Planning des entraînements</a></li>
-                            <li><a href="./contact.php">Contact</a></li>
-                            <li><a href="./demandeEssai.php">Demande d'essai</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-deroulant">LA BOUTIQUE &ensp;▼
-                        <ul class="sous-menu">
-                            <li><a href="https://app.grinta.eu/fc-canal-nord-1/products?collection=official">grinta.eu</a></li>
-                        </ul>    
-                    </li>
-                </ul>
-            </nav>              
-            <article class="socialMedia">
-                <!--icone facebook-->
-                <a href="https://www.facebook.com/people/Football-Club-Canal-Nord/100057223128364/"><img src="./images/fb.svg" alt="logofb" class="facebook">
-                </a>
-                
-                <!--icone instagram-->
-                <a href="https://www.instagram.com/fc_canalnord/"><img src="./images/instagram.svg" alt="logoinsta" class="instagram">
-                </a>
-                <!--icone linkedin-->
-                <a href="https://www.linkedin.com/company/footballclubcanalnord/about/"><img src="./images/linkedin.svg" alt="logolinkedin" class="linkedin">
-                </a>
-            </article>              
+            <div class="toggle">
+                <i class="fa-solid fa-bars ouvrir"></i>
+                <i class="fa-solid fa-xmark fermer"></i>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-deroulant">LE CLUB &ensp;<i class="fa-solid fa-chevron-down"></i>
+                    <ul class="sous-menu">
+                        <li><a href="#">A propos</a></li>
+                        <li><a href="#">Comité Directeur</a></li>
+                        <li><a href="#">Nos partenaires</a></li>
+                        <li><a href="#">Devenir partenaire</a></li>
+                    </ul>
+                </li>
+                <li class="menu-deroulant">LES EQUIPES &ensp;<i class="fa-solid fa-chevron-down"></i>
+                    <ul class="sous-menu">
+                        <li><a href="#">Ecole de foot</a></li>
+                        <li><a href="#">Pré-formation</a></li>
+                        <li><a href="#">Séniors</a></li>
+                        <li><a href="#">Féminines</a></li>
+                    </ul>
+                </li>
+                <li class="menu-deroulant">INFOS PRATIQUES &ensp;<i class="fa-solid fa-chevron-down"></i>
+                    <ul class="sous-menu">
+                        <li><a href="#">Tarifs des licences</a></li>
+                        <li><a href="#">Planning des entraînements</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
+                        <li><a href="./demandeEssai.php">Demande d'essai</a></li>
+                    </ul>
+                </li>
+                <li class="menu-deroulant"><a href="https://app.grinta.eu/fc-canal-nord/genders/new">LA BOUTIQUE</a></li>
+            </ul>
+
+        </nav>
+        <div class="socialMedia">
+            <a href="https://www.facebook.com/people/Football-Club-Canal-Nord/100057223128364/"><img src="images/fb.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/fc_canalnord/"><img src="images/instagram.svg" alt="instagram"></a>
+            <a href="https://www.linkedin.com/company/footballclubcanalnord"><img src="images/linkedin.svg" alt="linkedin"></a>
+        </div>
     </header>
     
     <section class="banniere">
@@ -135,13 +76,29 @@
                 N'hésitez pas à nous contacter
             </p>
             <p>
-                Pour les demandes d'essai, référez-vous au formulaire sur la page <a class="lien" href="demandeEssai.html">demande d'essai</a>
+                Pour les demandes d'essai, référez-vous au formulaire sur la page <a class="lien" href="./demandeEssai.php">demande d'essai</a>
             </p>
         </div>
         
 
         <h3>Contactez-nous :</h3>
         <form action="./register.php" method="post">
+            <?php
+                    if(isset($_GET["error"])){
+                        switch ($_GET["error"]) {
+                            case 1:
+                                echo "<div class='error-message'>Veuillez remplir tous les champs du formulaire</div>";
+                                break;
+                            case 2:
+                                echo "<div class='error-message'>L'adresse mail est invalide</div>";
+                                break;
+                        
+                            default:
+                                # code...
+                                break;
+                        }
+                    }
+            ?>
             
             <label for="nom_contact">Saisir votre nom :</label>
             <input name="nom_contact" type="text" placeholder="Nom" required="required"/>
@@ -151,12 +108,11 @@
             <input name="email_contact" type="email" placeholder="E-mail" required="required"/>
             <label for="telephone_contact">Saisir votre téléphone :</label>
             <input name="telephone_contact" type="tel" placeholder="Téléphone" required="required"/>
-            <label for="message_contact" class="message">Saisir votre message :</label>
+            <label for="message_contact" class="message" id="message">Saisir votre message :</label>
             <textarea name="message_contact" type="message" placeholder="Message" required="required"></textarea>
             <div class="button">
                 <button id="button" type="submit" name="submit">Envoyer</button>
-            </div>
-           
+            </div>   
         </form>
 
         <div class="adresse">
@@ -187,12 +143,13 @@
 
     <footer id="footer">
         <ul class="footer">
-            <li><a href="#">Contact</a></li>
+            <li><a href="./contact.php">Contact</a></li>
             <li><a href="#">Mentions légales</a></li>
+        </ul>
+        <ul class="footer">
             <li><a href="#">Documents officiels</a></li>
             <li><a href="#">Gestion des cookies</a></li>
         </ul>
-
         <div class="socialMedia">
                 <!--icone facebook-->
                 <a href="https://www.facebook.com/people/Football-Club-Canal-Nord/100057223128364/"><img src="./images/fb.svg" alt="logofb" class="facebook">
